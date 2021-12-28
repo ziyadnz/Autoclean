@@ -1,0 +1,13 @@
+[Unit]
+Description="Aotoclean Service for x session varning"
+
+[Service]
+User=root
+ExecStart=/bin/bash /home/kali/Desktop/Havelsan/Havelsan-HWS/lab/service/AutoClean/autoclean.sh
+Restart=on-failure
+Restartsec=10
+
+[Install]
+WantedBy=multi-user.target
+Also=cups.socket cups.path
+WantedBy=printer.target
